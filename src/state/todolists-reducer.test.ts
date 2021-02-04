@@ -1,7 +1,7 @@
 import {
     ActionType,
-    AddTodolistAC, ChangeTodoListFilterAC, ChangeTodoListTitleAC,
-    RemoveTodolistAC,
+    AddTodoListAC, ChangeTodoListFilterAC, ChangeTodoListTitleAC,
+    RemoveTodoListAC,
     todoListsReducer
 } from "./todolists-reducer";
 import {v1} from 'uuid';
@@ -16,7 +16,7 @@ test('correct todolist should be removed', () => {
         {id: todolistId2, title: "What to buy", filter: "all"}
     ]
 
-    const action: ActionType = RemoveTodolistAC(todolistId1);
+    const action: ActionType = RemoveTodoListAC(todolistId1);
 
     const endState = todoListsReducer(startState, action)
 
@@ -35,7 +35,7 @@ test('correct todolist should be added', () => {
         {id: todolistId2, title: "What to buy", filter: "all"}
     ]
 
-    const action: ActionType = AddTodolistAC(newTodolistTitle);
+    const action: ActionType = AddTodoListAC(newTodolistTitle);
 
     const endState = todoListsReducer(startState, action)
 

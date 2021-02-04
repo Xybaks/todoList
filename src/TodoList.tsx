@@ -37,7 +37,7 @@ export function TodoList(props: TodoListsType) {
     const removeDodoList = () => {
         props.removeDodoList(props.id)
     }
-
+//функция добавления тудулиста
     const addTask = (title: string) => {
         props.addTask(title, props.id)
     }

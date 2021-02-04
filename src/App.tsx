@@ -20,7 +20,7 @@ export type TodoListType = {
     filter: FilterValuesType
 }
 
-type TaskstateType = {
+export type TasksStateType = {
     [key: string]: Array<TaskType>
 }
 
@@ -37,7 +37,7 @@ function App() {
     ])
 
     // список задач c  ключами по todoListID, к ним хук useState,  замена данных по вызову функции setTasks
-    const [tasks, setTasks] = useState<TaskstateType>({
+    const [tasks, setTasks] = useState<TasksStateType>({
         [todoListID1]: [
             {id: v1(), title: "AAA", isDone: false},
             {id: v1(), title: "BBB", isDone: true},
