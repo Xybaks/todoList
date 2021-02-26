@@ -121,7 +121,6 @@ export const TodoList: React.FC<TodoListsType> = React.memo(({addTask,
             }
 
             </ul>
-
         </div>);
 })
 

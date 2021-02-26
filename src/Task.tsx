@@ -12,7 +12,7 @@ export type TaskPropsType = {
     task: TaskType
 }
 
-const Task = React.memo((props: TaskPropsType) => {
+export const Task = React.memo((props: TaskPropsType) => {
     //  функции реагирования для изменения статуса, удаления тасок, изменения имени таски :
     const changeTaskStatus = (e: ChangeEvent<HTMLInputElement>) => {
         props.changeTaskStatus(props.task.id, e.currentTarget.checked, props.todoListId)

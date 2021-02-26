@@ -38,7 +38,7 @@ export type TasksStateType = {
 }
 
 
-function AppWithRedux() {
+export const AppWithRedux = () => {
 //BLL
 //
 
@@ -85,7 +85,7 @@ function AppWithRedux() {
         dispatch(ChangeTaskTitleTypeAC(todoListID, taskID, title))
     }, [dispatch])
 
-     //UI
+    //UI
     return (
         <div className="App">
             {/*AppBar комопнента @material-ui - гогтовый Header*/}

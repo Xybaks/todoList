@@ -2,11 +2,11 @@ import React, {ChangeEvent, KeyboardEvent, useState} from "react";
 import {IconButton, TextField} from "@material-ui/core";
 import {AddBox} from "@material-ui/icons";
 
-type AddItemFormType = {
+export type AddItemFormPropsType = {
     addItem: (title: string) => void
 }
 
-export const AddItemForm = React.memo( (props: AddItemFormType)=> {
+export const AddItemForm = React.memo( (props: AddItemFormPropsType)=> {
         console.log("AddItemForm was called")
         const [title, setTitle] = useState<string>("")
         const [error, setError] = useState<string | null>(null)
